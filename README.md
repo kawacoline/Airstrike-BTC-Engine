@@ -1,18 +1,17 @@
-# ⚡ Airstrike-BTC Engine — Event-Driven Geopolitical Algorithmic Trading System
+# Airstrike-BTC Engine — Event-Driven Geopolitical Algorithmic Trading System
 
 [![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python)](https://python.org)
 [![MetaTrader 5](https://img.shields.io/badge/Platform-MetaTrader%205-green.svg)](https://www.metatrader5.com)
-[![AI Engine](https://img.shields.io/badge/AI-Google%20Gemini%20Flash-orange.svg?logo=google)](https://ai.google.dev)
 [![Web3 Market](https://img.shields.io/badge/DeFi-Polymarket%20CLOB-purple.svg)](https://polymarket.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 An institutional-grade, fully autonomous **news-to-execution pipeline** designed to capture high-velocity market dislocations in Bitcoin during breaking geopolitical events. 
 
-The engine continuously streams and aggregates raw headlines from 10+ global sources, classifies breaking military/macro events using LLM reasoning (Google Gemini), and executes ultra-low-latency short-sell orders on **MetaTrader 5** and **Polymarket BTC 5m binary markets** in sub-second timeframes.
+The engine continuously streams and aggregates raw headlines from 10+ global sources, classifies breaking military/macro events using real-time AI and semantic reasoning, and executes ultra-low-latency short-sell orders on **MetaTrader 5** and **Polymarket BTC 5m binary markets** in sub-second timeframes.
 
 ---
 
-## 🏛️ System Architecture
+## System Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -25,7 +24,7 @@ The engine continuously streams and aggregates raw headlines from 10+ global sou
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                     NLP & CLASSIFICATION ENGINE                         │
 │  • Cross-source Jaccard similarity deduplication (<3ms)                 │
-│  • Google Gemini Flash reasoning pipeline:                              │
+│  • Real-time AI classification pipeline:                                │
 │      - `is_us_airstrike`   → Confirms official military event           │
 │      - `is_current_event`  → Rejects historical/stale headlines         │
 │      - `is_fake_news`      → Flags retractions / denials                │
@@ -45,18 +44,18 @@ The engine continuously streams and aggregates raw headlines from 10+ global sou
 
 ---
 
-## ⚡ Key Features
+## Key Features
 
 - **Sub-Second Event Ingestion**: Multi-threaded, asynchronous scraping workers polling and streaming from 10+ distinct geopolitical and financial feeds.
-- **Cognitive NLP Filtering**: Eliminates false positives by evaluating context, grammar, and source credibility using Gemini LLMs rather than simple keyword matches.
+- **AI-Powered Event Classification**: Eliminates false positives by evaluating context, grammar, and source credibility through deep contextual analysis rather than simple keyword matches.
 - **Cross-Market Execution**: Simultaneously routes market orders to traditional CFD/forex brokers via MetaTrader 5 and Web3 prediction markets (Polymarket).
 - **Automated Retraction Circuit Breaker**: If follow-up news reports a correction, denial, or false alarm, the system immediately closes all open market positions to protect capital.
-- **Live Terminal Dashboard**: Rich TUI interface providing real-time feed telemetry, AI latency counters, deduplication rates, and order statuses.
+- **Live Terminal Dashboard**: Rich TUI interface providing real-time feed telemetry, latency counters, deduplication rates, and order statuses.
 - **Telegram Command & Control**: Real-time trade dispatch notifications, profit/loss telemetry, and remote kill-switch capability.
 
 ---
 
-## 📊 Quantitative Mechanics & Risk Management
+## Quantitative Mechanics & Risk Management
 
 | Parameter | Configuration | Purpose |
 |---|---|---|
@@ -68,7 +67,7 @@ The engine continuously streams and aggregates raw headlines from 10+ global sou
 
 ---
 
-## 🛠️ Installation & Setup
+## Installation & Setup
 
 ### 1. Prerequisites
 - **Operating System**: Windows 10/11 (required for MetaTrader 5 native IPC)
@@ -99,9 +98,8 @@ MT5_LOGIN=your_account_number
 MT5_PASSWORD=your_password
 MT5_SERVER=YourBroker-Server
 
-# Gemini AI Engine
-GEMINI_API_KEY=your_gemini_api_key
-GEMINI_MODEL=gemini-2.5-flash
+# News Classification API
+AI_API_KEY=your_api_key
 
 # Telegram Notifications
 TELEGRAM_BOT_TOKEN=your_bot_token
@@ -121,12 +119,12 @@ start.bat
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── main.py                 # Core TUI dashboard and master event loop
 ├── scraper_engine.py       # Concurrent multi-feed aggregator
-├── ai_filter.py            # Gemini LLM cognitive classifier
+├── ai_filter.py            # AI event classification and validation engine
 ├── dedup_engine.py         # Real-time Jaccard deduplication engine
 ├── mt5_engine.py           # MetaTrader 5 low-latency IPC execution
 ├── polymarket_engine.py    # Polymarket CLOB binary contract integration
@@ -138,7 +136,7 @@ start.bat
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Kawacoline**  
 *Full Stack Software Engineer & Algorithmic Trading Specialist*  
@@ -148,6 +146,6 @@ start.bat
 
 ---
 
-## ⚖️ Disclaimer
+## Disclaimer
 
 *This software is published for research, educational, and portfolio demonstration purposes. Algorithmic trading involves financial risk. Always test in simulated or demo environments before committing capital.*
